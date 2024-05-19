@@ -59,7 +59,6 @@ module.exports.createNote = async (event, ctx, cb) => {
 };
 
 module.exports.getNotes = async (event, ctx, cb) => {
-  console.log(event);
   // Prevent the Lambda function from waiting for the event loop to be empty
   ctx.callbackWaitsForEmptyEventLoop = false;
 

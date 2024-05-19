@@ -31,3 +31,10 @@ This means that the CodeBuild service role does not have the necessary permissio
 
 The build artifacts are stored in an S3 bucket. You can find the S3 bucket by going to the CodeBuild console, clicking on the build project, and looking at the `Artifacts` section.
 
+## Another step is to add a Manual Approval step in the pipeline
+
+- We can go the pipeline and add a approval step in between the build and deploy stage
+- This will allow us to manually approve the deployment before it is deployed to the production environment
+- We will send an SNS notification to the admin email address when the deployment is ready for approval
+- We can set up the SNS topic and subscription in the AWS console
+- And then add the SNS topic to the pipeline as a manual approval step
